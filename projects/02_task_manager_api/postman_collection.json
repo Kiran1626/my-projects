@@ -1,0 +1,12 @@
+{
+  "info": {"name": "Task Manager API", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"},
+  "variable": [{"key": "base", "value": "http://127.0.0.1:5000"}],
+  "item": [
+    {"name": "Health", "request": {"method": "GET", "url": "{{base}}/health"}},
+    {"name": "Create user", "request": {"method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}], "url": "{{base}}/users", "body": {"mode": "raw", "raw": "{\"name\": \"Asha\", \"email\": \"asha@example.com\"}"}}},
+    {"name": "Create task", "request": {"method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}], "url": "{{base}}/tasks", "body": {"mode": "raw", "raw": "{\"title\": \"Write report\", \"user_id\": 1, \"due_date\": \"2026-12-01\"}"}}},
+    {"name": "List tasks (filter + page)", "request": {"method": "GET", "url": "{{base}}/tasks?status=todo&page=1&size=10"}},
+    {"name": "Update task", "request": {"method": "PUT", "header": [{"key": "Content-Type", "value": "application/json"}], "url": "{{base}}/tasks/1", "body": {"mode": "raw", "raw": "{\"status\": \"done\"}"}}},
+    {"name": "Delete task", "request": {"method": "DELETE", "url": "{{base}}/tasks/1"}}
+  ]
+}

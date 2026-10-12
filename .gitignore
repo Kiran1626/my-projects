@@ -1,0 +1,25 @@
+# Environments / deps
+.venv/
+tools/
+projects/*/frontend/node_modules/
+
+# Build artifacts
+projects/*/frontend/dist/
+__pycache__/
+*.pyc
+
+# Local dev databases and logs
+*.sqlite3
+*.log
+
+# Editor / OS noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Secrets — never commit these
+.env
+.env.*
+Resume_Projects.zip
+.freebuff/
